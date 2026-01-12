@@ -64,7 +64,12 @@ export default function AdminDashboard() {
   }, []);
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, "users"), (s) => setTotalUsersCount(s.size));
+    // Create a query that filters ONLY for students
+    const q = query(collection(db, "users"), where("role", "==", "student"));
+
+    const unsubscribe = onSnapshot(q, (s) => {
+      setTotalUsersCount(s.size); // Now this size only includes students
+    });
     return () => unsubscribe();
   }, []);
 
