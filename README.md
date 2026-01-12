@@ -58,8 +58,8 @@ To run this project locally:
 
 1.  **Clone the repo**
     ```bash
-    git clone [https://github.com/your-username/vidyagranth.git](https://github.com/your-username/vidyagranth.git)
-    cd vidyagranth
+    git clone [https://github.com/spaciitks-droid/VidyaGranth.git](https://github.com/spaciitks-droid/VidyaGranth.git)
+    cd VidyaGranth
     ```
 
 2.  **Install Dependencies**
@@ -70,7 +70,8 @@ To run this project locally:
 3.  **Setup Firebase**
     * Create a project in Firebase Console.
     * Enable **Authentication** and **Firestore**.
-    * Copy your `firebaseConfig` keys into `src/config/firebase.js`.
+    * Create a file named firebaseConfig.ts in the root directory (the same folder as package.json).
+    * Paste your Firebase config keys into that file.
 
 4.  **Run the App**
     ```bash
