@@ -1,50 +1,92 @@
-# Welcome to your Expo app 👋
+# 📚 VidyaGranth: Smart Library Management System
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg) ![Tech](https://img.shields.io/badge/Built%20With-React%20Native%20%7C%20Expo-61dafb.svg) ![Backend](https://img.shields.io/badge/Backend-Firebase%20Firestore-orange.svg) ![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 
-## Get started
+**VidyaGranth** is a modern, cross-platform mobile application designed to digitize and streamline library operations. Built during a **1-week rapid development sprint**, it bridges the gap between students and librarians by offering real-time book tracking, digital issue requests, and instant broadcast alerts.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📱 App Screenshots
 
-2. Start the app
+| **Student Dashboard** | **Admin Panel** | **Book Discovery** |
+|:---:|:---:|:---:|
+| <img src="./screenshots/student_home.jpg" width="200"/> | <img src="./screenshots/admin_home.jpg" width="200"/> | <img src="./screenshots/available_books.jpg" width="200"/> |
+| *Real-time status & alerts* | *Stats & Quick Actions* | *Category filtering & Live Stock* |
 
-   ```bash
-   npx expo start
-   ```
+| **Queue Manager** | **Smart Notifications** | **Digital Book Profile** | **Digital Student Profile** |
+|:---:|:---:|:---:|
+| <img src="./screenshots/queue_manager.jpg" width="200"/> | <img src="./screenshots/notification.jpg" width="200"/> | <img src="./screenshots/book_profile.jpg" width="200"/> | <img src="./screenshots/student_profile.jpg" width="200"/> |
+| *Accept/Decline Requests* | *Instant Issue Confirmation* | *Digital ID Card* |
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Key Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🎓 For Students
+* **Live Dashboard:** View active loans ("Issued Books") and pending requests at a glance.
+* **Smart Discovery:** Browse books by category (Sci-Fi, History) and see **real-time stock availability** (e.g., "15/17 In").
+* **One-Tap Request:** Request books remotely. The button updates to "Pending..." instantly preventing duplicate requests.
+* **Reading History:** A complete log of all returned books with dates.
+* **Due Date Warnings:** Visual alerts for books expiring soon (e.g., "1 Days Left" tags).
+* **Broadcast Notification:** A Broadcast meassaging by the admin for urgent updates to the students.
 
-## Get a fresh project
+### 🛡️ For Admins (Librarians)
+* **Queue Manager:** distinct tabs for **New Issues** and **Reissues**. Admins can "Accept" (Green) or "Decline" (Red) requests.
+* **Broadcast System:** Post announcements (e.g., "New Arrivals") that instantly appear on all student dashboards.
+* **Inventory Control:** Auto-decrement stock upon issue.
+* **Student Management:** View a searchable list of all registered students and their "Active" status.
+* **Dynamic Settings:** Change the "Default Borrow Duration" directly from the app settings.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 🛠️ Technology Stack
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* **Frontend:** React Native (Expo SDK 50)
+* **Language:** JavaScript / TypeScript
+* **Navigation:** React Navigation (Stack & Tabs)
+* **Styling:** StyleSheet (Dark Mode implementation)
+* **Icons:** Ionicons
+* **Backend:** Google Firebase
+    * **Authentication:** Email/Password Login
+    * **Firestore:** Real-time NoSQL Database (Listeners for live updates)
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Installation & Setup
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+To run this project locally:
 
-## Join the community
+1.  **Clone the repo**
+    ```bash
+    git clone [https://github.com/your-username/vidyagranth.git](https://github.com/your-username/vidyagranth.git)
+    cd vidyagranth
+    ```
 
-Join our community of developers creating universal apps.
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+3.  **Setup Firebase**
+    * Create a project in Firebase Console.
+    * Enable **Authentication** and **Firestore**.
+    * Copy your `firebaseConfig` keys into `src/config/firebase.js`.
+
+4.  **Run the App**
+    ```bash
+    npx expo start
+    ```
+    * Scan the QR code with the **Expo Go** app on your Android/iOS device.
+
+---
+
+## 📂 Project Structure
+NitgyanamLibrary/ ├── app/ # Screens & Navigation (Expo Router) │ ├── admin/ # Admin routes (Dashboard, Queue, etc.) │ ├── student/ # Student routes (Home, Profile, etc.) │ └── auth/ # Login & Signup screens ├── assets/ # Images and Fonts ├── components/ # Reusable UI (Cards, Headers, Buttons) ├── constants/ # App Colors, Styles, Global Variables ├── hooks/ # Custom React Hooks ├── types/ # TypeScript Definitions ├── firebaseConfig.ts # Firebase Connection Logic └── README.md # Documentation
+
+---
+
+## 👨‍💻 Developer Info
+
+Developed by **Tejash Kumar** as part of the **DSTTE Internship Program** (Jan 2026)  for the NITGyanam Consultancy Pvt. Ltd.
+
+* **Contact:** spaciitks@gmail.com
