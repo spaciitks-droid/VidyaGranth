@@ -82,6 +82,8 @@ To run this project locally:
 ---
 
 ## 📂 Project Structure
+
+```text
 NitgyanamLibrary/
 ├── app/                  # Screens & Navigation (Expo Router)
 │   ├── admin/            # Admin routes (Dashboard, Queue, etc.)
